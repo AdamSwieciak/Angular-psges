@@ -1,0 +1,30 @@
+<nav class="navigation media-query-class">
+  <h3 class="brand">Page based on Angular</h3>
+  <section class="right-header">
+    <button class="buttonLogin">Login</button>
+    <button class="buttonSingUp">Sing Up</button>
+  </section>
+  <section class="toogle-button-menu">
+    <svg
+      viewBox="0 0 100 80"
+      width="35"
+      height="35"
+      color="blue"
+      (click)="onOpenMenu()"
+    >
+      <rect width="100" height="20" rx="8"></rect>
+      <rect y="30" width="100" height="20" rx="8"></rect>
+      <rect y="60" width="100" height="20" rx="8"></rect>
+    </svg>
+  </section>
+</nav>
+<menu class="toogle-menu" *ngIf="onClickMenu">
+  <ul>
+    <li>
+      <a href="">Login</a>
+    </li>
+    <li>
+      <a href="">Sing Up</a>
+    </li>
+  </ul>
+</menu>

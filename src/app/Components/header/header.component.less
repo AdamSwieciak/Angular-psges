@@ -1,0 +1,119 @@
+@colorfont: rgb(240, 240, 240);
+@backgroundNav: rgb(41, 41, 41);
+@backgroundButton: #1e90ff;
+
+.navigation {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: @backgroundNav;
+  .brand {
+    margin-left: 30px;
+    color: @colorfont;
+    cursor: pointer;
+    transition: .2s;
+  }
+  .brand:hover {
+    transform: scale(1.03);
+    transition: .2s;
+  }
+  .right-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    button {
+      height: 40px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin: 5px;
+      font-weight: 600;
+      border-radius: 5px;
+      color: @colorfont;
+      border: none;
+    }
+    button:hover {
+      transition: 0.3s;
+      transform: scale(1.1);
+    }
+
+    .buttonLogin {
+      background-color: @backgroundNav;
+      border: 1px solid @backgroundButton;
+    }
+    .buttonSingUp {
+      background-color: @backgroundButton;
+    }
+    .buttonLogin:hover {
+      background-color: @backgroundButton;
+    }
+    .buttonSingUp:hover {
+      background-color: #006fdf;
+    }
+  }
+
+  .toogle-button-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    svg {
+      fill: @backgroundButton;
+    }
+    svg:active {
+      fill: #0064c7;
+      transition: .3s;
+    }
+  }
+}
+
+.toogle-menu {
+  border-radius: 3px;
+  background-color: @backgroundNav;
+  position: absolute;
+  top: 50px;
+  height: 80px;
+  width: 100px;
+  right: 0;
+  padding: 10px;
+  ul {
+    padding: 0px;
+    margin: 0;
+    li {
+      cursor: pointer;
+      list-style-type: none;
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: @colorfont;
+      }
+    }
+    li:active a {
+      color: rgb(162, 160, 160);
+      transition: 0.3s;
+    }
+  }
+}
+
+.media-query-class {
+  @media screen {
+    .toogle-button-menu {
+      display: none;
+    }
+    @media (max-width: 480px) {
+      .right-header {
+        display: none;
+      }
+      .toogle-button-menu {
+        display: inline;
+      }
+    }
+  }
+}
