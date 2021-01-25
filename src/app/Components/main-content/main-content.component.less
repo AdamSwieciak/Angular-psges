@@ -1,0 +1,31 @@
+@backgroundButton: #1e90ff;
+@backgroundButtonHover: #0080ff;
+
+.mainContent {
+  margin: 0 auto;
+  margin-top: 70px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 2px #000000;
+  h1{
+    font-size: 35px;
+    font-weight: bold;
+  }
+  p{
+    font-size: 23px;
+  }
+  .buttonSection {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainContent {
+    width: 70vw;
+  }
+}

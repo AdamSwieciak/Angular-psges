@@ -1,0 +1,15 @@
+<section>
+  <form class="formField">
+    <label class="text" for="email">Email</label>
+    <input id="email" type="email" formControlName="email" />
+
+    <label class="text" for="password">Password</label>
+    <input id="password" type="password" formControlName="password" />
+
+    <label class="text" for="password" *ngIf="!isLogin">Repeat password</label>
+    <input id="password" type="password" formControlName="password" *ngIf="!isLogin" />
+
+    <button class="btnLabel" type="submit" *ngIf="isLogin">Log In</button>
+    <button class="btnLabel" type="submit" *ngIf="!isLogin">Sing Up</button>
+  </form>
+</section>
