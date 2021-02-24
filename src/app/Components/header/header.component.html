@@ -1,8 +1,8 @@
 <nav class="navigation media-query-class">
-  <h3 class="brand">Page based on Angular</h3>
+  <h3 class="brand" [routerLink]="['/main']" routerLinkActive="router-link-active" >Page based on Angular</h3>
   <section class="right-header">
-    <button class="buttonLogin">Login</button>
-    <button class="buttonSingUp">Sing Up</button>
+    <button class="buttonLogin" [routerLink]="['/login']" >Login</button>
+    <button class="buttonSingUp" [routerLink]="['/login']">Sing Up</button>
   </section>
   <section class="toogle-button-menu">
     <svg

@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.less', '../globalStyle.less']
+  styleUrls: ['./auth.component.less', '../globalStyle.less'],
 })
 export class AuthComponent implements OnInit {
-  isLogin: boolean = true
-  constructor() { }
+  isLogin: boolean = true;
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onSubmit(form: NgForm) {
+    console.log(form.value);
+    form.reset();
   }
-
 }

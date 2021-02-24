@@ -1,15 +1,25 @@
-<section>
-  <form class="formField">
-    <label class="text" for="email">Email</label>
-    <input id="email" type="email" formControlName="email" />
-
-    <label class="text" for="password">Password</label>
-    <input id="password" type="password" formControlName="password" />
-
-    <label class="text" for="password" *ngIf="!isLogin">Repeat password</label>
-    <input id="password" type="password" formControlName="password" *ngIf="!isLogin" />
-
-    <button class="btnLabel" type="submit" *ngIf="isLogin">Log In</button>
-    <button class="btnLabel" type="submit" *ngIf="!isLogin">Sing Up</button>
-  </form>
-</section>
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" >
+    <label for="email">E-mail</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      class="form-control"
+      ngModel
+      required
+      email
+    />
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      class="form-control"
+      ngModel
+      required
+      minlength="6"
+    />
+    <button class="btn" type="submit" [disabled]="!authForm.valid">
+      {{ isLogin ? 'Login' : 'Sign Up' }}
+    </button>
+</form>
