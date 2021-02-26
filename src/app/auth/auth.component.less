@@ -1,5 +1,5 @@
 @backgroundButton: #1e90ff;
-form{
+.formComponent {
   position: relative;
   top: 50%;
   left: 50%;
@@ -13,21 +13,32 @@ form{
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  label{
-    font-size: 20px;
-    padding: 10px;
+  .formComponent__spinner{
+    width: 20%;
+    height: 20%;
   }
-  input{
-    box-sizing: border-box;
-    width: 80%;
-    padding: 8px;
-  }
-  .btn{
-    box-sizing: border-box;
-    width: 80%;
-    padding: 10px;
-    margin-top: 50px;
-    background-color: @backgroundButton;
-    color: white;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    label {
+      font-size: 20px;
+      padding: 10px;
+    }
+    input {
+      box-sizing: border-box;
+      width: 80%;
+      padding: 8px;
+    }
+    .btn {
+      box-sizing: border-box;
+      width: 80%;
+      padding: 10px;
+      margin-top: 50px;
+      background-color: @backgroundButton;
+      color: white;
+    }
   }
 }
